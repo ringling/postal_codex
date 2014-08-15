@@ -6,12 +6,12 @@ defmodule PostalCodex.Server do
   # External API
 
   def start_link(countries) do
-    IO.puts "Starting postal server."
+    Logger.info "Starting postal server."
     GenServer.start_link(__MODULE__, countries, name: __MODULE__)
   end
 
   def init(countries) do
-    Logger.info "init: Postal codes for #{length(Map.values(countries))} countries"
+    Logger.info "Server started"
     {:ok, countries}
   end
 
@@ -20,9 +20,7 @@ defmodule PostalCodex.Server do
   end
 
   def postal_code(country, postal_number) do
-    GenServer.call(
-       __MODULE__,
-      {:postal_code, country, postal_number}
+    GenServer.call(__MODULE__, {:postal_code, country, postal_number}
     )
   end
 

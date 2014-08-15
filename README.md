@@ -8,6 +8,8 @@ __Examples__
 * Testing
 * OTP
 * Supervisor
+* profiler
+* http_load
 * Caching (ETS/DETS)
 * Deployment
 * Plug REST API
