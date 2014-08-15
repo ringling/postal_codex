@@ -13,7 +13,7 @@ defmodule PostalCodex.Mixfile do
   # Type `mix help compile.app` for more information
   def application do
     [
-      applications: [:logger, :httpoison],
+      applications: [:logger, :httpoison, :poison],
       mod: {PostalCodex, []}
     ]
   end
@@ -30,7 +30,8 @@ defmodule PostalCodex.Mixfile do
   defp deps do
     [
       {:httpoison, "~> 0.4"},
-      {:poison, "~>1.1.0"}
+      {:poison, "~>1.1.0"},
+      {:exrm, "~> 0.14.11"}
     ]
   end
 end
