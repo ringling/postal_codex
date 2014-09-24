@@ -7,6 +7,7 @@ __Examples__
 
 * Testing
 * OTP
+* Supervisor
 * Caching (ETS/DETS)
 * Deployment
 * Plug REST API
