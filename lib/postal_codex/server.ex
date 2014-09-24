@@ -18,6 +18,10 @@ defmodule PostalCodex.Server do
     {:ok, countries}
   end
 
+  def crash(postal_code_server) do
+  	GenServer.call(postal_code_server, {:crash, " DO CRASH!!!"})
+  end
+
   def postal_code(postal_code_server, country, postal_number) do
   	GenServer.call(
   		postal_code_server,
