@@ -1,0 +1,2 @@
+defmodule PostalCodex do
+end
